@@ -5,7 +5,7 @@
 Sparkify is a music streaming platform, has grown their user base and song database even more and want to move their data warehouse to a data lake.
 Their data resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
 
-the Task here is to build an ETL pipeline, extract the data/json files from S3, transforem them using spark into demintional tables then loads them back into S3 
+the Task here is to build an ETL pipeline, extract the data/json files from S3, transform them using spark into dimensional tables then loads them back into S3 
 
 ## project Datasets
 ### Song Dataset
@@ -32,12 +32,12 @@ songplay_id, start_time, user_id, level, song_id, artist_id, session_id, locatio
 4-  time - timestamps of records in songplays broken down into specific units start_time, hour, day, week, month, year, weekday
 
 ## explanation of the files in the repository
-`data.zip` is the data from Sparkify that is placed in S3 for tranfomtion   
-`dl.cfg` configuration and settings file to place aws access key id and aws secret access key  
-`etl.py`  load data from S3 transforem then using spark then loads them againe into S3 for the analytics team.  
+`data.zip` is the data from Sparkify that is placed in S3 for transformation.     
+`dl.cfg` configuration and settings file to place aws access key id and aws secret access key.    
+`etl.py`  load data from S3 transform then using spark then loads them again into S3 for the analytics team.   
 
-## to run the Python scripts
-1- Add aws credintal in `dl.cfg`   
+## to run the Python script
+1- Add aws credentials  in `dl.cfg`   
 2- run in terminal `python etl.py`  
 
 
